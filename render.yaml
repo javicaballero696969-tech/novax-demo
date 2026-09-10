@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: novax-demo
+    runtime: node
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: JWT_SECRET
+        generateValue: true
